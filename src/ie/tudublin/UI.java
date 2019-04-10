@@ -1,3 +1,9 @@
+/* 
+The program wouldnt recognise the imports for PApple, Table and TableRow.
+Therefore I couldnt print or test anything.
+*/
+
+
 package ie.tudublin;
 
 import java.util.ArrayList;
