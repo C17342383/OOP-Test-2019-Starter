@@ -26,6 +26,8 @@ public class Resistor extends PApplet
     int widthDivided = 500 - gap;
     int wDivplus = 500 + gap;
     int middle = 500;
+    int resistorSize = gap*2;
+    int gapDivide = gap/10;
     public void render();
     {
         for(int i = 0; i <=4;i++)
@@ -33,6 +35,8 @@ public class Resistor extends PApplet
             rect(gap, gap*2, gap*2,gap);
             line(gap*2,widthDivided,gap*2 , gap );
             line(gap*2, wDivplus, gap*2, gap);
+            //fill(getR(), getG(), getB())
+            rect(gap+(gapDivide*2, gapDivide, gap*2, gapDivide);
             gap = gap + add;
         }
 
@@ -93,8 +97,5 @@ public class Resistor extends PApplet
     public void setHundreds(int hundreds) {
         this.hundreds = hundreds;
     }
-
-
-
 
 }
