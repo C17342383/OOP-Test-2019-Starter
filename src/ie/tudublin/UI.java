@@ -7,8 +7,9 @@ import processing.data.Table;
 import processing.data.TableRow;
 
 public class UI extends PApplet
-
-{	public void separate(int value)
+{	
+	Resistor res;
+	public void separate(int value)
 	{
 		int hundreds = (value / 100);
 		int tens = (value - (hundreds * 100)) / 10;
@@ -35,7 +36,11 @@ public class UI extends PApplet
 	public void draw()
 	{	
 		loadColours();
-		printColours();		
+		printColours();
+		findColour();	
+		loadResistor();
+		printResistor();
+		res.render();	
 	}
 
 	ArrayList<Colour> colours = new ArrayList<Colour>;
@@ -62,11 +67,36 @@ public class UI extends PApplet
 
 	public Colour findColor(int value)
 	{
+		for(int i =0; i< Sizeof(colours);i++)
+		{
+			if(i == value)
+			{
+				return colours(i);
+			}
+		}
+	}
 
+	ArrayList<Resistor> resistors = new ArrayList<Resistor>;
+
+	public void loadResistor()
+	{
+		Table table2 = loadTable("resistors.csv", "row");
+        for(TableRow tabler2:table2.rows())
+        {
+            Resistor r = new Resistor(tabler2);
+            resistors.add(r);
+        }   
 
 	}
 
-	ArrayList<Resistor> resistorss = new ArrayList<Resistor>;
+	public void printResistor()
+	{
+		for(Resistor r : resistors)
+		{
+			System.out.println(r);
+		}
 
-	
+	}
+
+
 }

@@ -1,6 +1,8 @@
 package ie.tudublin;
 
-public class Resistor
+import processing.core.PApplet;
+
+public class Resistor extends PApplet
 {
     public int value;
     public int ones;
@@ -15,6 +17,18 @@ public class Resistor
         print(hundreds + ",");
         print(tens + ",");
         println(ones);
+
+    }
+
+    int gap = 500/13;
+    int add = gap*3;
+    public void render();
+    {
+        for(int i = 0; i <=4;i++)
+        {
+            rect(gap, gap*2, gap*2,gap);
+            gap = gap + add;
+        }
 
     }
 
