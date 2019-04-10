@@ -2,7 +2,7 @@ package ie.tudublin;
 
 import processing.data.*;
 
-public class Colour
+public class Colour 
 {
     public int r;
     public int g;
@@ -72,15 +72,6 @@ public class Colour
     public void setString(String string) {
         this.string = string;
     }
-
-    /*
-    public Colour 
-    {
-        r  = getInt("r");
-        g = getInt("g");
-        b = getInt("b");
-        string = getString("colour");
-    */
 
     public String toString()
     {

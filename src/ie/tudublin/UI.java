@@ -65,4 +65,8 @@ public class UI extends PApplet
 
 
 	}
+
+	ArrayList<Resistor> resistorss = new ArrayList<Resistor>;
+
+	
 }
